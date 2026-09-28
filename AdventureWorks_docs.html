@@ -1,0 +1,69 @@
+DimCurrency DimProduct FactCurrencyRate
+DimCustomer DimProductCategory FactInternetSales
+DimDate DimProductSubcategory FactInternetSalesReason
+DimDepartmentGroup DimPromotion FactResellerSales
+DimEmployee DimReseller FactSurveyResponse
+DimGeography DimSalesReason
+DimOrganization DimSalesTerritory
+<TR>
+  <TH>&#39;Number of rows in DimCustomer&#39;
+</TR>
+<TR>
+  <TD>Number of rows in DimCustomer
+</TR>
+<TR>
+  <TH>count(1)
+</TR>
+<TR>
+  <TD>18484
+</TR>
+<TR>
+  <TH>sql
+</TR>
+<TR>
+  <TD>CREATE TABLE DimCustomer(
+    CustomerKey int IDENTITY(1,1) NOT NULL PRIMARY KEY,
+    GeographyKey int NULL,
+    CustomerAlternateKey nvarchar(15) NOT NULL,
+    Title nvarchar(8) NULL,
+    FirstName nvarchar(50) NULL,
+    MiddleName nvarchar(50) NULL,
+    LastName nvarchar(50) NULL,
+    NameStyle bit NULL,
+    BirthDate date NULL,
+    MaritalStatus...
+</TR>
+<TR>
+  <TH>sql
+</TR>
+<TR>
+  <TD>CREATE TABLE DimCurrency(
+    CurrencyKey int IDENTITY(1,1) NOT NULL PRIMARY KEY,
+    CurrencyAlternateKey nchar(3) NOT NULL,
+    CurrencyName nvarchar(50) NOT NULL
+    )
+</TR>
+<TR>
+  <TD>CREATE TABLE DimCustomer(
+    CustomerKey int IDENTITY(1,1) NOT NULL PRIMARY KEY,
+    GeographyKey int NULL,
+    CustomerAlternateKey nvarchar(15) NOT NULL,
+    Title nvarchar(8) NULL,
+    FirstName nvarchar(50) NULL,
+    MiddleName nvarchar(50) NULL,
+    LastName nvarchar(50) NULL,
+    NameStyle bit NULL,
+    BirthDate date NULL,
+    MaritalStatus...
+</TR>
+<TR>
+  <TD>CREATE TABLE DimProduct(
+    ProductKey int IDENTITY(1,1) PRIMARY KEY,
+    ProductAlternateKey nvarchar(25) NULL,
+    ProductSubcategoryKey int NULL,
+    WeightUnitMeasureCode nchar(3) NULL,
+    SizeUnitMeasureCode nchar(3) NULL,
+    EnglishProductName nvarchar(50) NOT NULL,
+    SpanishProductName nvarchar(50) NOT NULL,
+    FrenchProductN...
+</TR>
